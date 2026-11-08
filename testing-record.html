@@ -1,0 +1,153 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Test Record</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Form Test Record</h1>
+        <p>Custom Baseball Card Label Request</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>F5 - Form State Matrix</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>State</th>
+                        <th>Implementation</th>
+                        <th>Expected behavior</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Default</td>
+                        <td>Empty form fields</td>
+                        <td>Fields are visible and ready for entry.</td>
+                    </tr>
+                    <tr>
+                        <td>Focus</td>
+                        <td>:focus-visible</td>
+                        <td>Neon-blue outline identifies keyboard focus.</td>
+                    </tr>
+                    <tr>
+                        <td>Required</td>
+                        <td>HTML required attribute</td>
+                        <td>Missing information prevents submission.</td>
+                    </tr>
+                    <tr>
+                        <td>Valid</td>
+                        <td>:valid and native constraints</td>
+                        <td>Acceptable entries pass validation.</td>
+                    </tr>
+                    <tr>
+                        <td>Invalid</td>
+                        <td>:invalid and native browser validation</td>
+                        <td>Incorrect entries are identified.</td>
+                    </tr>
+                    <tr>
+                        <td>Disabled</td>
+                        <td>disabled attribute</td>
+                        <td>Unavailable button cannot be activated.</td>
+                    </tr>
+                    <tr>
+                        <td>Error recovery</td>
+                        <td>Linked error summary</td>
+                        <td>Users can locate the error and read correction instructions.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>F6 - Responsive Testing</h2>
+            <ul>
+                <li>320px mobile viewport - Passed</li>
+                <li>768px tablet viewport - Passed</li>
+                <li>1280px desktop viewport - Passed</li>
+                <li>200% browser zoom - Passed</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>F4 - Validation Testing</h2>
+            <ul>
+                <li>Empty required fields - Tested and Passed</li>
+                <li>Incorrect email format - Tested and Passed</li>
+                <li>Card year outside allowed range - Tested and Passed</li>
+                <li>Unchecked acknowledgment - Tested and Passed</li>
+            </ul>
+        </section>
+
+<section>
+    <h2>F4 - Fictional Test Data</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Test</th>
+                <th>Sample input</th>
+                <th>Expected result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Valid collector name</td>
+                <td>Alex Collector</td>
+                <td>Accepted</td>
+            </tr>
+            <tr>
+                <td>Valid email</td>
+                <td>collector@example.com</td>
+                <td>Accepted</td>
+            </tr>
+            <tr>
+                <td>Invalid email</td>
+                <td>alex.example</td>
+                <td>Browser displays an email-format error</td>
+            </tr>
+            <tr>
+                <td>Card year below minimum</td>
+                <td>1899</td>
+                <td>Browser rejects the year</td>
+            </tr>
+            <tr>
+                <td>Card year above maximum</td>
+                <td>2027</td>
+                <td>Browser rejects the year</td>
+            </tr>
+            <tr>
+                <td>Missing required field</td>
+                <td>Empty collector name</td>
+                <td>Browser requests a value</td>
+            </tr>
+            <tr>
+                <td>Required acknowledgment</td>
+                <td>Checkbox unchecked</td>
+                <td>Browser prevents submission</td>
+            </tr>
+            <tr>
+                <td>Optional parallel</td>
+                <td>Left blank</td>
+                <td>No validation error</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+        <section>
+            <h2>Testing Notes</h2>
+            <p>
+                Testing used fictional information. The project
+                demonstrates native HTML validation without
+                JavaScript or live data collection.
+            </p>
+        </section>
+    </main>
+</body>
+</html>

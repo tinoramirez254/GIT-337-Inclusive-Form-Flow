@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Field Inventory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            max-width: 80rem;
+            margin: auto;
+            padding: 1rem;
+            color: #191919;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: .6rem;
+            border: 1px solid #999;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>F2 · Task and Data Plan</h1>
+    <p>
+        This inventory documents the information needed for a
+        custom baseball card label request, including
+        field requirements, constraints, and privacy considerations.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Visible label / question</th>
+                <th>Why necessary now?</th>
+                <th>Required?</th>
+                <th>Native control/type</th>
+                <th>Submitted name/value</th>
+                <th>Autocomplete/inputmode</th>
+                <th>Constraint/instruction</th>
+                <th>Sensitivity and minimization decision</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        <tbody>
+            <tr>
+                <td>Collector name</td>
+                <td>Identifies who is requesting the label.</td>
+                <td>Yes</td>
+                <td>text</td>
+                <td>collector_name</td>
+                <td>name</td>
+                <td>Enter first and last name.</td>
+                <td>Names only for this demonstration.</td>
+            </tr>
+            <tr>
+                <td>Email address</td>
+                <td>Provides a way to contact the collector.</td>
+                <td>Yes</td>
+                <td>email</td>
+                <td>email</td>
+                <td>email</td>
+                <td>Must use a valid email format.</td>
+                <td>Use email addresses. No phone number collected.</td>
+            </tr>
+            <tr>
+                <td>Player name</td>
+                <td>Identifies the player featured on the card.</td>
+                <td>Yes</td>
+                <td>text</td>
+                <td>player_name</td>
+                <td>N/A</td>
+                <td>Enter the player's name.</td>
+                <td>Public baseball information only.</td>
+            </tr>
+            <tr>
+                <td>Card year</td>
+                <td>Identifies the card's release year.</td>
+                <td>Yes</td>
+                <td>number</td>
+                <td>card_year</td>
+                <td>N/A</td>
+                <td>Enter a year from 1900 to 2026.</td>
+                <td>Non-sensitive card information.</td>
+            </tr>
+            <tr>
+                <td>Card manufacturer</td>
+                <td>Identifies the company that produced the card.</td>
+                <td>Yes</td>
+                <td>select</td>
+                <td>manufacturer</td>
+                <td>N/A</td>
+                <td>Select Topps, Bowman, Panini, or Other.</td>
+                <td>Non-sensitive card information.</td>
+            </tr>
+            <tr>
+                <td>Card set</td>
+                <td>Identifies the specific baseball card product.</td>
+                <td>Yes</td>
+                <td>text</td>
+                <td>card_set</td>
+                <td>N/A</td>
+                <td>Example: Topps Chrome.</td>
+                <td>Non-sensitive card information.</td>
+            </tr>
+            <tr>
+                <td>Card parallel</td>
+                <td>Identifies special card variations.</td>
+                <td>No</td>
+                <td>text</td>
+                <td>parallel</td>
+                <td>N/A</td>
+                <td>Example: Gold Refractor.</td>
+                <td>Optional because not every card has a parallel.</td>
+            </tr>
+            <tr>
+                <td>Card serial number</td>
+                <td>Documents numbered cards.</td>
+                <td>No</td>
+                <td>text</td>
+                <td>serial_number</td>
+                <td>N/A</td>
+                <td>Example: 05/50.</td>
+                <td>Optional because many cards are not numbered.</td>
+            </tr>
+            <tr>
+                <td>Label background style</td>
+                <td>Determines the visual appearance of the label.</td>
+                <td>Yes</td>
+                <td>radio group</td>
+                <td>background_style</td>
+                <td>N/A</td>
+                <td>Choose one background style.</td>
+                <td>Design preference only.</td>
+            </tr>
+            <tr>
+                <td>Label finish</td>
+                <td>Determines the requested label finish.</td>
+                <td>Yes</td>
+                <td>select</td>
+                <td>label_finish</td>
+                <td>N/A</td>
+                <td>Select matte, glossy, or holographic.</td>
+                <td>Design preference only.</td>
+            </tr>
+            <tr>
+                <td>Additional instructions</td>
+                <td>Allows collectors to describe special design requests.</td>
+                <td>No</td>
+                <td>textarea</td>
+                <td>instructions</td>
+                <td>N/A</td>
+                <td>Maximum 300 characters.</td>
+                <td>Optional; users should not provide personal information.</td>
+            </tr>
+            <tr>
+                <td>Design acknowledgment</td>
+                <td>Confirms the collector understands this is a demo.</td>
+                <td>Yes</td>
+                <td>checkbox</td>
+                <td>acknowledgment</td>
+                <td>N/A</td>
+                <td>Must be checked before submitting.</td>
+                <td>No additional personal data collected.</td>
+            </tr>
+    </table>
+</body>
+
+</html>

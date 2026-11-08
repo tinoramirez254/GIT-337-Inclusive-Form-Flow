@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Custom Baseball Card Label Request</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <p class="eyebrow">Application, Registration, or Request</p>
+        <h1>Custom Baseball Card Label Request</h1>
+        <p>
+            Request a custom label for your baseball card collection.
+            This form is designed for collectors who want to personalize
+            their card displays.
+        </p>
+
+
+        <p>
+            <strong>Estimated time:</strong> 3-5 minutes.
+            Fields marked with * are required. All other fields are optional.
+        </p>
+
+        <p>
+            <strong>What happens next:</strong>
+            This request form previews the information needed
+            to create a custom baseball card label.
+            The design process would begin after the
+            request details have been reviewed.
+        </p>
+
+        <p>
+            <strong>Privacy:</strong>
+            Your contact information is requested only to discuss
+            your custom label design. Please do not include
+            payment information or other sensitive personal details.
+        </p>
+
+    </header>
+    <main>
+        <section id="expectations">
+            <h2>Before You Begin</h2>
+            <p>
+                Please have your baseball card information ready,
+                including the player name, card year, manufacturer,
+                and any special parallel or variation details.
+            </p>
+        </section>
+        <form action="about:blank" method="dialog">
+            <fieldset>
+                <legend>Contact Information</legend>
+
+                <p class="help">
+                    Provide your contact information so we can discuss
+                    your label request. Fields marked with * are required.
+                </p>
+
+                <div class="field">
+                    <label for="name">Collector Name *</label>
+                    <input id="name" name="collector_name" type="text" autocomplete="name" maxlength="80"
+                        aria-describedby="name-help" required>
+                    <p class="help" id="name-help">
+                        Enter first and last name. Maximum 80 characters.
+                    </p>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email Address *</label>
+                    <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-help"
+                        required>
+                    <p class="help" id="email-help">
+                        Example: collector@example.com.
+                        We'll use this address to discuss your label design.
+                    </p>
+                </div>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Card Information</legend>
+
+                <p class="help">
+                    Enter the details of the baseball card.
+                    Fields marked with * are required.
+                </p>
+
+                <div class="field">
+                    <label for="player-name">Player Name *</label>
+                    <input id="player-name" name="player_name" type="text" maxlength="80" required>
+                </div>
+
+                <div class="field">
+                    <label for="card-year">Card Year *</label>
+                    <input id="card-year" name="card_year" type="number" min="1900" max="2026" step="1"
+                        aria-describedby="year-help" required>
+                    <p class="help" id="year-help">
+                        Enter a year between 1900 and 2026.
+                    </p>
+                </div>
+
+                <div class="field">
+                    <label for="manufacturer">Card Manufacturer *</label>
+                    <select id="manufacturer" name="manufacturer" required>
+                        <option value="">Select a manufacturer</option>
+                        <option value="topps">Topps</option>
+                        <option value="bowman">Bowman</option>
+                        <option value="panini">Panini</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="card-set">Card Set *</label>
+                    <input id="card-set" name="card_set" type="text" maxlength="100" placeholder="Example: Topps Chrome"
+                        required>
+                </div>
+
+                <div class="field">
+                    <label for="parallel">Card Parallel (Optional)</label>
+                    <input id="parallel" name="parallel" type="text" maxlength="100"
+                        placeholder="Example: Gold Refractor">
+                </div>
+
+                <div class="field">
+                    <label for="serial-number">Card Serial Number (Optional)</label>
+                    <input id="serial-number" name="serial_number" type="text" maxlength="30"
+                        placeholder="Example: 05/50">
+                </div>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Label Design Preferences</legend>
+
+                <p class="help">
+                    Choose the appearance of your custom label.
+                </p>
+
+                <fieldset>
+                    <legend>Label Background Style *</legend>
+
+                    <label class="choice">
+                        <input type="radio" name="background_style" value="classic" required>
+                        Classic
+                    </label>
+
+                    <label class="choice">
+                        <input type="radio" name="background_style" value="chrome">
+                        Chrome
+                    </label>
+
+                    <label class="choice">
+                        <input type="radio" name="background_style" value="team_colors">
+                        Team Colors
+                    </label>
+                </fieldset>
+
+                <div class="field">
+                    <label for="label-finish">Label Finish *</label>
+                    <select id="label-finish" name="label_finish" required>
+                        <option value="">Select a finish</option>
+                        <option value="matte">Matte</option>
+                        <option value="glossy">Glossy</option>
+                        <option value="holographic">Holographic</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="instructions">
+                        Additional Instructions (Optional)
+                    </label>
+                    <p class="help" id="instructions-help">
+                        Describe any special design requests.
+                        Maximum 300 characters. Do not include personal information.
+                    </p>
+                    <textarea id="instructions" name="instructions" maxlength="300"
+                        aria-describedby="instructions-help"></textarea>
+                </div>
+
+                <label class="choice">
+                    <input type="checkbox" name="acknowledgment" value="confirmed" required>
+                    I have reviewed my card information and label preferences. *
+                </label>
+            </fieldset>
+
+            <button type="submit">Submit Label Request</button>
+        </form>
+
+        <section id="states">
+
+            <h2>Form Validation and Error Examples</h2>
+            <p>
+                The examples below demonstrate how incorrect information
+                is identified and how users can correct their entries.
+                These examples are separate from the request form above.
+            </p>
+
+            <div class="error-summary">
+                <h3>There is a problem with the submission</h3>
+                <p>
+                    <a href="#error-example">
+                        Email Address: Enter a valid email address to continue.
+                    </a>
+                </p>
+            </div>
+            <div class="field field-error">
+                <label for="error-example">Email address</label>
+                <input id="error-example" type="email" value="alex.example" aria-invalid="true"
+                    aria-describedby="error-message">
+                <p id="error-message"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
+            </div>
+            <button type="button" disabled>Submission Unavailable</button>
+        </section>
+        
+<section id="documentation">
+    <h2>F2 and F6 · Planning and Evidence</h2>
+
+    <p>
+        Supporting documentation for this project includes
+        the field inventory, form validation tests,
+        accessibility checks, and responsive layout testing.
+    </p>
+
+    <ul>
+        <li>
+            <a href="field-inventory-template.html">
+                F2: Field Inventory and Data Plan
+            </a>
+        </li>
+        <li>
+            F5: Form states include default, focus,
+            required, valid, invalid, and disabled.
+        </li>
+        <li>
+            F6: Responsive layouts tested at 320px,
+            768px, 1280px, and 200% zoom.
+        </li>
+        <li>
+            HTML and CSS validation performed using
+            W3C validation tools.
+        </li>
+    </ul>
+</section>
+
+    </main>
+</body>
+
+</html>
